@@ -120,11 +120,13 @@ serve(async (req) => {
     return new Response(JSON.stringify(returnData), {
       headers: { 'Content-Type': 'application/json' },
       status: 200,
+      corsHeaders
     })
   } catch (error) {
     return new Response(JSON.stringify({ error: error?.message }), {
       headers: { 'Content-Type': 'application/json' },
       status: 400,
+      corsHeaders
     })
   }
 })
