@@ -21,7 +21,7 @@ type ChannelType = {
 }
 
 serve(async (req) => {
-  if (req.method === 'OPTIONS') {
+  if (req.method === 'OPTIONS' || req.method === 'GET') {
     return new Response('ok', { headers: corsHeaders })
   }
 
